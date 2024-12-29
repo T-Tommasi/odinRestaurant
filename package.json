@@ -1,0 +1,26 @@
+{
+  "name": "odinrestaurant",
+  "version": "1.0.0",
+  "description": "a quick project form the TOP library to affine JS and NPM skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-Tommasi/odinRestaurant.git"
+  },
+  "author": "T.Tommasi <ttommasi1945@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/T-Tommasi/odinRestaurant/issues"
+  },
+  "homepage": "https://github.com/T-Tommasi/odinRestaurant#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
