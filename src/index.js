@@ -1,10 +1,14 @@
 import './style.css';
-import CreateNewDiv from './divCreator.js'
+import { HomePage } from './homepage';
 
-console.log('the JS file has been loaded succesfully', '----', `imported: ${CreateNewDiv}`)
+console.log('the JS file has been loaded succesfully')
 
 //create the heading
 
-function websiteCreator()  {
-    new CreateNewDiv(something)
+function websiteLoader()  {
+    let container = document.querySelector('.content')
+    console.log(container)
+    HomePage(container)
 }
+
+websiteLoader()
