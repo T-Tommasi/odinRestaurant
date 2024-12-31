@@ -1,14 +1,14 @@
 import './style.css';
 import { HomePage } from './homepage';
+import { MenuPage } from './menu';
 
 console.log('the JS file has been loaded succesfully')
 
 //create the heading
 
 function websiteLoader()  {
-    let container = document.querySelector('.content');
-    console.log(container);
-    HomePage(container);
+    const CONTAINER = document.querySelector('.content');
+    console.log(CONTAINER);
 
     function appendListener(origin,result) {
         origin.addEventListener('click', result);
@@ -23,8 +23,32 @@ function websiteLoader()  {
         console.log('DOM cleaned')
     }
 
-    function pageLoader(buttonList) {
-
+    function pageLoader() {
+        const BUTTONS = document.querySelectorAll('button');
+        for (let button of BUTTONS) {
+            switch(button.textContent) {
+                case 'Home':
+                    appendListener(button, () => {
+                        cleanseDOM();
+                        HomePage(CONTAINER)
+                    });
+                    break;
+                case 'Menu':
+                    appendListener(button, () => {
+                        cleanseDOM();
+                        MenuPage(CONTAINER)
+                    });
+                    break;
+                case 'About us':
+                    appendListener(button, () => {
+                        alert('PAGE STILL IN CONSTRUCTION')
+                    });
+                    break;
+            }
+        }
     }
+
+    HomePage(CONTAINER);
+    pageLoader();
 }
 websiteLoader()
