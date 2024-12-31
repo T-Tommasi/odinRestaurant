@@ -1,5 +1,5 @@
 import CreateNewDiv from "./divCreator";
-import image from "./map"
+import image from "./map.png"
 
 export function aboutUs(parent) {
     function addImage(image, parent) {

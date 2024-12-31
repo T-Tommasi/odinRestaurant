@@ -1,8 +1,9 @@
 import './style.css';
 import { HomePage } from './homepage';
 import { MenuPage } from './menu';
+import { aboutUs } from './contacts';
 
-console.log('the JS file has been loaded succesfully')
+console.log('the JS file has been loaded succesfully');
 
 //create the heading
 
@@ -18,9 +19,9 @@ function websiteLoader()  {
         const CONTAINER = document.querySelector('.content');
         while (CONTAINER.firstChild) {
             CONTAINER.removeChild(CONTAINER.lastChild);
-        }
+        };
         console.log('------');
-        console.log('DOM cleaned')
+        console.log('DOM cleaned');
     }
 
     function pageLoader() {
@@ -30,18 +31,19 @@ function websiteLoader()  {
                 case 'Home':
                     appendListener(button, () => {
                         cleanseDOM();
-                        HomePage(CONTAINER)
+                        HomePage(CONTAINER);
                     });
                     break;
                 case 'Menu':
                     appendListener(button, () => {
                         cleanseDOM();
-                        MenuPage(CONTAINER)
+                        MenuPage(CONTAINER);
                     });
                     break;
                 case 'About us':
                     appendListener(button, () => {
-                        alert('PAGE STILL IN CONSTRUCTION')
+                        cleanseDOM();
+                        aboutUs(CONTAINER);
                     });
                     break;
             }
@@ -51,4 +53,4 @@ function websiteLoader()  {
     HomePage(CONTAINER);
     pageLoader();
 }
-websiteLoader()
+websiteLoader();
